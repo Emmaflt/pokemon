@@ -1,0 +1,20 @@
+<p>pokemon-detail works!</p>
+
+<div class="container mt-4">
+  <h2>Information du Pokemon</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" [src]="pokemon.image" alt="{{ pokemon.nom }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ pokemon.nom }}</h5>
+          <p class="card-text">
+            <strong>Type:</strong> {{ pokemon.type }}<br />
+            <strong>Taille:</strong> {{ pokemon.taille }} m<br />
+            <strong>Poids:</strong> {{ pokemon.poids }} kg
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

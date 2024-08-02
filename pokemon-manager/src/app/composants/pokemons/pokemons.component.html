@@ -1,1 +1,16 @@
-<p>pokemons works!</p>
+@for (pokemon of pokemons; track $index ) {
+<div class="card mb-4 shadow-sm">
+  <img class="card-img-top" [src]="pokemon.image" alt="{{ pokemon.nom }}" />
+  <div class="card-body">
+    <h5 class="card-title">{{ pokemon.nom }}</h5>
+    <p class="card-text">
+      <strong>Type:</strong> {{ pokemon.type }}<br />
+      <strong>Taille:</strong> {{ pokemon.taille }} m<br />
+      <strong>Poids:</strong> {{ pokemon.poids }} kg
+    </p>
+    <a [routerLink]="['/pokemons', pokemon.id]" class="btn btn-primary"
+      >Voir Détails</a
+    >
+  </div>
+</div>
+}

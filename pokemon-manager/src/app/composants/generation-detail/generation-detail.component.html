@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <p>gen details works! ID= {{ id }}</p>
+    <p>Liste des Pokémon de la génération {{ id }} :</p>
+    <div class="row">
+      @for (pokemon of generationPokemons; track $index) {
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card shadow-sm h-100">
+            <img class="card-img-top" [src]="pokemon.image" alt="{{ pokemon.nom }}" style="max-height: 150px; object-fit: cover;" />
+            <div class="card-body">
+              <h5 class="card-title">{{ pokemon.nom }}</h5>
+              <p class="card-text">
+                <strong>Type:</strong> {{ pokemon.type }}<br />
+                <strong>Taille:</strong> {{ pokemon.taille }} m<br />
+                <strong>Poids:</strong> {{ pokemon.poids }} kg
+              </p>
+              <a [routerLink]="['/pokemons', pokemon.id]" class="btn btn-primary btn-sm">Voir Détails</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>    
